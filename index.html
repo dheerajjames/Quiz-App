@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Quiz App</title>
+         <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h2>!!WELCOME!!</h2>
+        <div class="container">
+            <div class="wel">
+                <form class="welcome_form" name="welcome_form" onsubmit="start(event)">
+                    <input type="text" name="name" placeholder="Your name.." required><br><br>
+                    <button>Start Quiz</button>
+                </form>
+            </div>
+        </div>
+        <script>
+            function start(e) {
+                e.preventDefault();
+                var name = document.forms["welcome_form"]["name"].value;   
+                sessionStorage.setItem("name", name);
+                location.href = "Quiz.html";
+            }
+        </script>
+    </body>
+</html>
